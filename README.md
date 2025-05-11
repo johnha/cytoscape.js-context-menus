@@ -1,6 +1,11 @@
 cytoscape-context-menus
 ================================================================================
 
+## Note
+
+This fork resolves an issue with the background menu selection when no node or edge is selected.  The main project still
+has outstanding pull requests (see https://github.com/iVis-at-Bilkent/cytoscape.js-context-menus/pull/71/commits/e633b6b4982716bb50ff3245fc03a0936d62da8b)
+that have not been resolved.  The core API does not support 'is'.
 
 ## Description
 
