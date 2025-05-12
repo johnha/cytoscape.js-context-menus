@@ -91,8 +91,8 @@ export class MenuItem extends HTMLButtonElement {
 
         super.addEventListener('mousedown', stopEvent);
         super.addEventListener('mouseup', stopEvent);
-        super.addEventListener('touchstart', stopEvent);
-        super.addEventListener('touchend', stopEvent);
+        super.addEventListener('touchstart', stopEvent, { passive: true });
+        super.addEventListener('touchend', stopEvent, { passive: true });
     }
 
     bindOnClickFunction(onClickFn) {
@@ -134,7 +134,7 @@ export class MenuItem extends HTMLButtonElement {
         return this.hasTrailingDivider ? true : false;
     }
     /**
-     * @param {boolean} status 
+     * @param {boolean} status
      */
     setHasTrailingDivider(status) {
         this.hasTrailingDivider = status;
@@ -234,7 +234,7 @@ export class MenuItem extends HTMLButtonElement {
           visibleItems.forEach((item, index) => {
             if (!(item instanceof MenuItem))
               return;
-    
+
             if (index < length - 1 && item.getHasTrailingDivider()) {
               item.classList.add(DIVIDER_CSS_CLASS);
             }
