@@ -38,7 +38,6 @@ export function contextMenus(opts) {
       // Check for each menuItem, if show is true, show the menuItem
       for (let menuItem of cxtMenu.children) {
           if (menuItem instanceof MenuItem) {
-            console.log('johnha: test menu display')
             const is = typeof target.is === 'function' ? (selector) => target.is(selector) : () => false;
               let shouldDisplay = (target === cy) ?
                   // If user clicked in cy area then show core items
